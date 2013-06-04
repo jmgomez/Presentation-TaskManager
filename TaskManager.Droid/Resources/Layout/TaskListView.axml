@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <Mvx.MvxListView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        local:MvxBind="ItemsSource Tasks"
+        local:MvxItemTemplate="@layout/item_task"
+        android:layout_marginBottom="0.0dp"
+        android:id="@+id/mvx.MvxListView1"
+        android:layout_marginTop="0.0dp" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        local:MvxBind="Text NewTaskText, Mode=TwoWay" />
+    <Button
+        android:text="Add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        local:MvxBind="Click AddTaskCommand" />
+    <Button
+        android:text="Mostrar todos"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        local:MvxBind="Click ShowAllTasksCommand" />
+    <Button
+        android:text="Finalizadas"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        local:MvxBind="Click ShowFinishedTasksCommand" />
+    <Button
+        android:text="Sin finalizar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        local:MvxBind="Click ShowUnfinishedTasksCommand" />
+</LinearLayout>
