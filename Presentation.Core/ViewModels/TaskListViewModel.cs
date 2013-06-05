@@ -35,7 +35,7 @@ namespace TaskManager.Core.ViewModels
 
         private void AddTask()
         {
-           if(string.IsNullOrWhiteSpace(NewTaskText))
+           if(!string.IsNullOrWhiteSpace(NewTaskText))
                 Tasks = _taskService.AddTask(new Task(){Name=NewTaskText});
            NewTaskText = string.Empty;
         }
